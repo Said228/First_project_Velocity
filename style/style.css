@@ -5,7 +5,8 @@
   border-bottom: 1px solid #E4E8F0;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
 
 .header__title {
   font-size: 19px; }
@@ -16,9 +17,12 @@
   margin: 0 9px; }
 
 .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #ffffff;
   width: 80px;
-  hight: 100%;
+  min-height: 2000px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -34,18 +38,36 @@
     justify-content: center; }
 
 .sidebar-link__item:hover {
-  background-color: #2E5BFF; }
+  border-left: 3px solid #2E5BFF;
+  background-color: lightblue; }
 
 .sidebar__hamburger-button:hover {
   background-color: #2E5BFF; }
 
+.header-news__list {
+  position: absolute;
+  right: 0;
+  z-index: 3; }
+
 body {
-  background-color: #F4F6FC; }
+  background-color: #F4F6FC;
+  font-family: 'Rubik', sans-serif; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  height: auto; }
 
 .main-content-top {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: row;
+  margin-top: 61px; }
+
+.main-content__left {
+  margin-right: 24px; }
 
 .main-content__left-top {
   background-color: white;
@@ -98,15 +120,16 @@ body {
 
 .main-content__left-bot {
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-between; }
 
 .main-content__left-bot__first {
-  margin-top: 24px;
   width: 100%;
-  padding: 11px 0 0 24px;
-  background-color: white;
-  margin-right: 24px; }
+  margin: 35px 0 0 0;
+  padding-left: 15px;
+  background-color: white; }
   .main-content__left-bot__first p {
     font-size: 13px;
     line-height: 15px;
@@ -121,14 +144,35 @@ body {
       letter-spacing: -0.6px;
       color: #2E384D; }
 
+.main-content__left-bot__first:nth-child(2) {
+  margin-left: 24px; }
+
 .main-content__left-bot__second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  margin-right: 24px; }
+  padding-left: 15px;
+  width: 100%;
+  margin: 24px 0 0 12px; }
 
 .main-content__left-bot__first__text {
   font-weight: 300;
   font-size: 28px;
   line-height: 32px;
   color: #2E384D; }
+
+.main-content__map {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; }
+
+.main-content__bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; }
+
+.main-content__bottom__item {
+  margin-right: 15px; }
 
 /*# sourceMappingURL=style.css.map */
